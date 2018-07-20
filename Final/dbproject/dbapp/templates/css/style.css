@@ -1,0 +1,26 @@
+body {
+  transition-duration: 3s;
+  background-color: #27ae60;
+  color: #fff;
+  max-width: 800px;
+  margin: 100px auto 0;
+  text-align: center;
+  display: table;
+}
+
+.counter {
+  transition-duration: 3s;
+  display: table-cell;
+  margin: 1.5%;
+  font-size: 50px;
+  background-color: #186a3b;
+  width: 200px;
+  border-radius: 50%;
+  height: 200px;
+  vertical-align: middle;
+  font-size: 60pt;
+}
+.message {
+  font-size: 50pt;
+  margin-left: 10px;
+}

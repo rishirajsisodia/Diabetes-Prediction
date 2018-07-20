@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Diabetes Detection: v1.0</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>    
+</head>
+<body>
+<div class="god">
+<!------------------------------------------------------- THIS IS CONTAINER 1 --------------------------------------------------->
+<div class="container">
+  <h2>Diabetes Prediction System</h2>
+  <form class="form-horizontal" action="/action_page.php"> 
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Pregnancy:</label>
+      <div class="col-sm-10">
+        <input class="form-control" id="1" placeholder="No. of Pregnancies" name="1">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" >Glucose Concentration:</label>
+      <div class="col-sm-10">          
+        <input class="form-control" id="2" placeholder="mmol/L" name="2">
+      </div>   
+    </div>
+       <div class="form-group">
+      <label class="control-label col-sm-2" >Blood Pressure Concentration:</label>
+      <div class="col-sm-10">          
+        <input class="form-control" id="3" placeholder="mm Hg" name="3">
+      </div>
+       </div>    
+ <div class="form-group">
+      <label class="control-label col-sm-2" >Skin fold Thickness:</label>
+      <div class="col-sm-10">          
+        <input class="form-control" id="4" placeholder="Skin Fold thickness" name="4">
+      </div>
+       </div>    
+ <div class="form-group">
+      <label class="control-label col-sm-2">Insulin:</label>
+      <div class="col-sm-10">          
+        <input class="form-control" id="5" placeholder="insulin" name="5">
+      </div>
+       </div>    
+ <div class="form-group">
+      <label class="control-label col-sm-2" >BMI:</label>
+      <div class="col-sm-10">          
+        <input class="form-control" id="6" placeholder="BMI" name="6">
+      </div>
+       </div>  
+ <div class="form-group">
+      <label class="control-label col-sm-2">DPF:</label>
+      <div class="col-sm-10">          
+        <input class="form-control" id="7" placeholder="DiabetesFunction" name="7">
+      </div>
+       </div>  
+<div class="form-group">
+      <label class="control-label col-sm-2">Age:</label>
+      <div class="col-sm-10">          
+        <input class="form-control" id="8" placeholder="Age" name="8">
+      </div>
+       </div>
+<button type="button" id="register" class="btn peach-gradient btn-lg">Analyse</button>
+  </form>
+    <p id="demo"></p>
+    </div>
+    <!------------------------------------------------------- THIS IS END OF CONTAINER I --------------------------------------------------->
+    
+    <!------------------------------------------------------- THIS IS START OF CONTAINER II --------------------------------------------------->
+    <div class="container2">
+
+    <div id="calco" class="counter" data-count="response">0</div>
+    <div class="message">
+        
+    <p id="paste">Check</p>
+        </div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  
+
+   
+    </div>
+    <!------------------------------------------------------- THIS IS START OF CONTAINER II --------------------------------------------------->
+    </div>
+<!--  CSS STARTS HERE ------------------------------------------------------------------------------------------------------------------ -->
+    
+<style type="text/css">
+    
+    .god{
+            padding:90px;
+        padding-left: 120px;
+    }
+    .form-control{
+        
+        font-size:12pt; 
+        font-size:12pt; 
+        border-radius:12px !important;
+        background: rgba(255,255,255,0.6);
+        border:none;
+    }
+    .container{
+        float:left;
+        width:800px;
+        height:600px;
+        font-size:10pt;
+        margin-left:10px;
+        margin:10px;
+        background: rgba(255,255,255,0.3); 
+        border: solid #BDBDBD 1px; 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)  ; 
+        -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)  ; 
+        -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)  ; 
+        border-radius: 10px;
+    }    
+       .container2 {
+          float:left;
+          width:400px;
+          height:600px;
+          background-color: #27ae60;
+          transition-duration: 3s;
+          margin:10px;
+          margin-left:10px;
+          color: #fff;
+          max-width: 800px;
+           /* margin: 100px auto 0; */
+          text-align: center;
+          /* display: table; */
+        border:none; 
+           border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)  ; 
+        -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)  ; 
+        -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)  ; 
+}
+        .message {
+            font-size: 50pt;
+            margin-left: -25px;
+}
+          .counter {
+          transition-duration: 3s;
+          /*display: table-cell;*/
+          margin: 23%;
+          padding-top: 40px;
+          font-size: 50px;
+          background-color: #186a3b;
+          width: 200px;
+          border-radius: 50%;
+          height: 200px;
+          vertical-align: middle;
+          font-size: 60pt;
+         text-align:center;
+}
+    #register{
+    margin-left:50%;  
+}
+    body{
+            background-color:#00b894);
+            background-repeat:no-repeat;
+            background-size:cover;
+            height:100%;
+            -webkit-transition:2s;
+    }
+</style>
+    
+<!-----------------------------------------------------------------------------------------------------------------------// CSS ENDS HERE -->
+    
+</body>
+    
+    
+    
+    <script>
+        $(document).ready(function(){
+        $("#register").click(function(){var p=$("#1").val(); var g = $("#2").val();
+    var b = $("#3").val();var s = $("#4").val();var i = $("#5").val();var bm = $("#6").val();var d = $("#7").val();var a = $("#8").val();
+      var Stories = $("#3").val();$.get('/register',{P:p,G:g,B:b,S:s,I:i,BM:bm,D:d,A:a},function(response){ var x=document.getElementById("calco").innerHTML=response;
+          if (x> 50) {
+    $(".container2").css("background-color", "#B03A2E");
+    $(".counter").css("background-color", "#943126");
+    $("body").css("background-color","#ff7675")
+    document.getElementById("paste").innerHTML = "AT RISK!";
+  } else if (x == 50) {
+    $(".container2").css("background-color", "#ff8b90");
+    $(".counter").css("background-color", "#ff7688");
+    document.getElementById("paste").innerHTML = "Marginal";
+    $("body").css("background-color","#ff7675")
+  }
+    else {
+            $(".container2").css("background-color", "#22A7F0");
+            $(".counter").css("background-color", "#19B5FE");
+            document.getElementById("paste").innerHTML = "SAFE";
+            $("body").css("background-color","#74b9ff")
+    }
+        }); 
+    })
+        });
+              
+    //THIS IS FALTU CODE
+ function run(){
+        $(".counter").each(function() {
+  var $this = $("#calco"),
+    countTo = $this
+
+  $({ countNum: $this.text() }).animate(
+    {
+      countNum: countTo
+    },
+
+    {
+      duration: 1000,
+      easing: "linear",
+      step: function() {
+        $this.text(Math.floor(this.countNum));
+      },
+      complete: function() {
+        $this.text(this.countNum);
+        alert('finished');
+      }
+    }
+  );
+});
+ }
+        var options = {
+  useEasing: true, 
+  useGrouping: true, 
+  separator: ',', 
+  decimal: '.', 
+};
+    </script>
+</html>
+
